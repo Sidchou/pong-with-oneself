@@ -67,7 +67,17 @@ ball.x += ballV.x * ballS;
 ball.y += ballV.y * ballS;
 ```
 
-##### Step 5: move the ball, when it hit something
+##### Step 5: draw paddle
+
+draw
+```
+  let paddle = [width / 50, height / 10]
+    //paddle move based on mouse x,y
+  rect(width * 0.05, mouseX - 4, paddle[0], paddle[1]);
+  rect(width * (1 - 0.05), mouseY - 4, -paddle[0], paddle[1]);
+  ```
+
+##### Step 6: move the ball, when it hit something
 
 draw
 (hitting the wall)
@@ -90,7 +100,7 @@ if (ball.x < width * (1 - 0.05) - paddle[0] * 0.1 && ball.x > width * (1 - 0.05)
 }
 ```
 
-##### Step 6: Scoring
+##### Step 7: Scoring
 
 global
 ```
@@ -118,7 +128,7 @@ if (ball.x > width + ballS * frameRate()) {
 }
 ```
 
-##### Step 7: winning
+##### Step 8: winning
 
 draw
 ```
@@ -127,7 +137,7 @@ if (score[0] > 11 || score[1] > 11) {
 }
 ```
 
-##### Step 8: Center Line
+##### Step 9: Center Line
 
 draw
 ```
@@ -139,7 +149,7 @@ for (let i = 0; i < n; i++) {
 }
 ```
 
-##### Step 9: Show Scores
+##### Step `0`: Show Scores
 
 draw
 ```
@@ -155,7 +165,7 @@ function showScore(score) {
 }
 ```
 
-##### Step 10: customize font
+##### Step 11: customize font
 
 showScore
 ```
@@ -265,7 +275,7 @@ function font(curser, score) {
 }
 ```
 
-##### Step 11: play sound
+##### Step 12: play sound
 
 preload
 ```
@@ -283,7 +293,7 @@ draw
 (scoring)
 `soundPoint.play();`
 
-##### Step 12: click to start
+##### Step 13: click to start
 
 global
 ```
@@ -307,7 +317,7 @@ noLoop();
 start = false;
 ```
 
-##### Step 13: start Screen
+##### Step 14: start Screen
 
 draw
 ```
